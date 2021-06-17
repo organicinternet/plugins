@@ -89,6 +89,7 @@ class GoogleSignInPlugin extends GoogleSignInPlatform {
 
     final auth2.GoogleAuth auth = auth2.init(auth2.ClientConfig(
       hosted_domain: hostedDomain,
+      ux_mode: 'redirect',
       // The js lib wants a space-separated list of values
       scope: scopes.join(' '),
       client_id: appClientId!,
